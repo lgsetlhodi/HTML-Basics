@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textbox {
+            width: 200px;
+            height: 20px;
+            background-color: aquamarine;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="fname">First Name</label><br />
+    <input id="fname" class="textbox" type="text" />
+    <br />
+    <label for="lname">Last Name</label><br />
+    <input id="lname" class="textbox" type="text" />
+    <br />
+    <label for="dob">Date of birth</label><br />
+    <input id="dob" type="date" />
+    <br />
+    <label for="course">Course</label>
+    <select id="course">
+        <option>course 1</option>
+        <option>course 2</option>
+        <option>course 3</option>
+        <option>course 4</option>
+        <option>course 5</option>
+
+    </select>
+    <br />
+    <label>Do you own a computer</label>
+    <input name="question" id="yes" type="radio" />
+    <input name="question" id="no" type="radio" />
+
+    <button id="submit">submit</button>
+
+</body>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var submitButton = document.getElementById('submit');
+        var firstName = document.getElementById('fname');
+        var courseDrop = document.getElementById('course');
+        var radioButton = document.getElementsByName('question');
+
+        console.log(radioButton);
+        submitButton.addEventListener('click', () => {
+            alert(firstName.value)
+        })
+
+        courseDrop.addEventListener('change', () => {
+            alert(courseDrop.value);
+
+        })
+
+        radioButton.addEventListener('click', () => {
+            alert(radioButton.value);
+
+        })
+    });
+</script>
+
+</html>
