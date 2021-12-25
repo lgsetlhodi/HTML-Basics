@@ -49,10 +49,8 @@
         var firstName = document.getElementById('fname');
         var courseDrop = document.getElementById('course');
         var radioButton = document.getElementsByName('question');
-        
-        submitButton.addEventListener('click', () => {
-            alert(firstName.value)
-        })
+
+        submitButton.addEventListener('click', submitHandler)
 
         courseDrop.addEventListener('change', () => {
             alert(courseDrop.value);
@@ -63,6 +61,10 @@
             alert(radioButton.value);
 
         })
+
+        function submitHandler() {
+            alert(firstName.value)
+        }
     });
 </script>
 
